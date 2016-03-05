@@ -1,0 +1,69 @@
+<ion-navbar *navbar>
+  <button menuToggle *ngIf="!selectedItem">
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>~/Maths</ion-title>
+</ion-navbar>
+
+<ion-content padding>
+    <ion-row>
+        <h2>I'm reading</h2>
+    </ion-row>
+    <ion-row>
+        <ion-col width-25>
+            <ion-card>
+                <ion-card-header>
+                    <h3>Principles of Mathematical Analysis</h3>
+                    <p>Walter Rudin - 1976</p>
+                </ion-card-header>
+                    <img src="http://d.gr-assets.com/books/1339192336l/292079.jpg"/>                
+                <ion-card-content>
+                    <p>I'm studying this book with Adam. We're currently working on the first chapter.</p>                    
+                </ion-card-content>
+            </ion-card>
+        </ion-col>
+        <ion-col width-25>
+            <ion-card>
+                <ion-card-header>
+                    <h3>Principles and Techniques in Combinatorics</h3>
+                    <p>Chen Chuan-Chong, Koh Khee-Meng - 1992</p>
+                </ion-card-header>
+                <img src="http://ecx.images-amazon.com/images/I/516jKvu44YL._SY344_BO1,204,203,200_.jpg"/>
+                <ion-card-content>
+                    <p>I'm studying this book with the good folks of the Combinatorics Slack group. We're currently working on the first chapter</p>
+                    <p>We also have a solution <a href="https://www.sharelatex.com/project/56cb43f58c514778460c04f8" target="blank">LaTeX document</a></p>
+                </ion-card-content>
+            </ion-card>
+        </ion-col>
+        <ion-col width-25>
+            <ion-card>
+                <ion-card-header>
+                    <h3>Combinatorics Through Guided Discovery</h3>
+                    <p>Kenneth P. Bogart - 2004</p>
+                </ion-card-header>
+                <img src="http://biblioteca.pymex.pe/wp-content/uploads/2015/03/combinatorics-through-guided-discovery.jpg"/>
+                <ion-card-content>
+                    <p>I'm working through this book on my own. I'm currently on the first chapter</p>
+                </ion-card-content>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <h2>I suggest</h2>
+    </ion-row>
+    <ion-row>
+        <ion-col width-25>
+            <ion-card>
+                <ion-card-header>
+                    <h3>Mathematical Proofs</h3>
+                    <p>Chartand, Polimeni, Zhang - 2012</p>
+                </ion-card-header>
+                <img src="http://ecx.images-amazon.com/images/I/41u-fNfPoBL._SX258_BO1,204,203,200_.jpg"/>
+                <ion-card-content>
+                    <p>I've worked through this book with Adam from Dec 2015 to February 2016. I cannot recommend it enough. I went from zero proof ability to being able to prove basic mathematical statements, including a national Olympiad problem.</p>
+                    <p>We also have a <a href="https://www.reddit.com/r/almostadvancedmath">subreddit</a> to discuss its content</p>
+                </ion-card-content>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+</ion-content>
