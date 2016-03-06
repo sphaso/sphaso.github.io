@@ -63278,24 +63278,23 @@
 	};
 	var ionic_angular_1 = __webpack_require__(5);
 	var logPipe_1 = __webpack_require__(368);
+	var logService_1 = __webpack_require__(370);
 	var LogPage = (function () {
-	    function LogPage(nav, navParams) {
+	    function LogPage(nav, navParams, service) {
 	        this.nav = nav;
-	        this.entries = [{ date: '20160306', message: 'Added TV section. ion-icon directive is broken?', icon: 'arrow-round-back' },
-	            { date: '20160306', message: 'Started filling in my solutions for Mathematical Proofs in sharelatex', icon: 'bulb' },
-	            { date: '20160306', message: 'Meeting the combinatorics group on MathIM tonight', icon: 'bulb' },
-	            { date: '20160305', message: "Started Rhys's book: Combinatorics through guided discovery", icon: 'bulb' },
-	            { date: '20160305', message: "Waiting for Gregg's slack invite. Weekend?", icon: 'hammer' },
-	            { date: '20160304', message: 'Updated firebase-haskell-client, I think I finished GET. Still some trouble with the other verbs. Waiting for Roland to unit test my work (when are we meeting?)', icon: 'hammer' },
-	            { date: '20160304', message: 'Waiting for Adam to schedule our next meeting', icon: 'bulb' }
-	        ];
+	        this.service = service;
 	    }
+	    LogPage.prototype.ngOnInit = function () {
+	        var _this = this;
+	        this.service.getLogs().subscribe(function (data) { return _this.entries = data; });
+	    };
 	    LogPage = __decorate([
 	        ionic_angular_1.Page({
 	            templateUrl: 'build/pages/log/log.html',
-	            pipes: [logPipe_1.LogFilterPipe]
+	            pipes: [logPipe_1.LogFilterPipe],
+	            providers: [logService_1.LogService]
 	        }), 
-	        __metadata('design:paramtypes', [ionic_angular_1.NavController, ionic_angular_1.NavParams])
+	        __metadata('design:paramtypes', [ionic_angular_1.NavController, ionic_angular_1.NavParams, logService_1.LogService])
 	    ], LogPage);
 	    return LogPage;
 	})();
@@ -63416,6 +63415,135 @@
 	})();
 	exports.TvPage = TvPage;
 
+
+/***/ },
+/* 370 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(7);
+	var http_1 = __webpack_require__(145);
+	__webpack_require__(371);
+	var LogService = (function () {
+	    function LogService(http) {
+	        this.http = http;
+	    }
+	    LogService.prototype.getLogs = function () {
+	        return this.http.get('log.json').map(function (r) { return r.json(); });
+	    };
+	    LogService = __decorate([
+	        core_1.Injectable(), 
+	        __metadata('design:paramtypes', [http_1.Http])
+	    ], LogService);
+	    return LogService;
+	})();
+	exports.LogService = LogService;
+
+
+/***/ },
+/* 371 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var Observable_1 = __webpack_require__(56);
+	var map_1 = __webpack_require__(372);
+	Observable_1.Observable.prototype.map = map_1.map;
+	//# sourceMappingURL=map.js.map
+
+/***/ },
+/* 372 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	var Subscriber_1 = __webpack_require__(57);
+	var tryCatch_1 = __webpack_require__(373);
+	var errorObject_1 = __webpack_require__(374);
+	/**
+	 * Similar to the well known `Array.prototype.map` function, this operator
+	 * applies a projection to each value and emits that projection in the returned observable
+	 *
+	 * @param {Function} project the function to create projection
+	 * @param {any} [thisArg] an optional argument to define what `this` is in the project function
+	 * @returns {Observable} a observable of projected values
+	 */
+	function map(project, thisArg) {
+	    if (typeof project !== 'function') {
+	        throw new TypeError('argument is not a function. Are you looking for `mapTo()`?');
+	    }
+	    return this.lift(new MapOperator(project, thisArg));
+	}
+	exports.map = map;
+	var MapOperator = (function () {
+	    function MapOperator(project, thisArg) {
+	        this.project = project;
+	        this.thisArg = thisArg;
+	    }
+	    MapOperator.prototype.call = function (subscriber) {
+	        return new MapSubscriber(subscriber, this.project, this.thisArg);
+	    };
+	    return MapOperator;
+	})();
+	var MapSubscriber = (function (_super) {
+	    __extends(MapSubscriber, _super);
+	    function MapSubscriber(destination, project, thisArg) {
+	        _super.call(this, destination);
+	        this.project = project;
+	        this.thisArg = thisArg;
+	        this.count = 0;
+	    }
+	    MapSubscriber.prototype._next = function (x) {
+	        var result = tryCatch_1.tryCatch(this.project).call(this.thisArg || this, x, this.count++);
+	        if (result === errorObject_1.errorObject) {
+	            this.error(errorObject_1.errorObject.e);
+	        }
+	        else {
+	            this.destination.next(result);
+	        }
+	    };
+	    return MapSubscriber;
+	})(Subscriber_1.Subscriber);
+	//# sourceMappingURL=map.js.map
+
+/***/ },
+/* 373 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var errorObject_1 = __webpack_require__(374);
+	var tryCatchTarget;
+	function tryCatcher() {
+	    try {
+	        return tryCatchTarget.apply(this, arguments);
+	    }
+	    catch (e) {
+	        errorObject_1.errorObject.e = e;
+	        return errorObject_1.errorObject;
+	    }
+	}
+	function tryCatch(fn) {
+	    tryCatchTarget = fn;
+	    return tryCatcher;
+	}
+	exports.tryCatch = tryCatch;
+	;
+	//# sourceMappingURL=tryCatch.js.map
+
+/***/ },
+/* 374 */
+/***/ function(module, exports) {
+
+	exports.errorObject = { e: {} };
+	//# sourceMappingURL=errorObject.js.map
 
 /***/ }
 /******/ ]);

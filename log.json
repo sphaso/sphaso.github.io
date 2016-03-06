@@ -1,0 +1,9 @@
+[
+{"date": "20160306", "message": "Added TV section. ion-icon directive is broken?", "icon": "arrow-round-back"},
+{"date": "20160306", "message": "Started filling in my solutions for Mathematical Proofs in sharelatex", "icon": "bulb"},
+{"date": "20160306", "message": "Meeting the combinatorics group on MathIM tonight", "icon":"bulb"},
+{"date": "20160305", "message": "Started Rhys's book: Combinatorics through guided discovery", "icon":"bulb"},
+{"date": "20160305", "message": "Waiting for Gregg's slack invite. Weekend?", "icon":"hammer"},
+{"date": "20160304", "message": "Updated firebase-haskell-client, I think I finished GET. Still some trouble with the other verbs. Waiting for Roland to unit test my work (when are we meeting?)", "icon":"hammer"},
+{"date": "20160304", "message": "Waiting for Adam to schedule our next meeting", "icon":"bulb"}
+]
