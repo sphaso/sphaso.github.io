@@ -1,0 +1,20 @@
+<ion-navbar *navbar>
+  <ion-title>~/CHANGELOG</ion-title>
+</ion-navbar>
+
+<ion-content padding>
+<ion-col width-25 offset-25>
+    <ion-input type="text" placeholder="filter" #logFilter (keyup)="0"></ion-input>
+</ion-col>
+<ion-col width-50 offset-25>
+    <ion-list inset>
+        <ion-item *ngFor="#e of entries | logFilter:logFilter.value">
+            <ion-avatar item-left>
+                <ion-icon [name]="e.icon"></ion-icon>
+            </ion-avatar>
+            <h2>{{e.date}}</h2>
+            <p>{{e.message}}</p>
+        </ion-item>
+    </ion-list>
+</ion-col>
+</ion-content>

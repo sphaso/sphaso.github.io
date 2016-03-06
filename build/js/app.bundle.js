@@ -63086,6 +63086,7 @@
 	var projects_1 = __webpack_require__(364);
 	var training_1 = __webpack_require__(365);
 	var links_1 = __webpack_require__(366);
+	var log_1 = __webpack_require__(367);
 	var HomePage = (function () {
 	    function HomePage(nav) {
 	        this.nav = nav;
@@ -63094,7 +63095,8 @@
 	            { title: '~/Maths', description: 'Reading list', icon: 'bulb', component: maths_1.MathsPage },
 	            { title: '~/CS', description: 'Reading list', icon: 'cloud', component: cosci_1.CosciPage },
 	            { title: '~/Training', description: 'Light weights homie', icon: 'body', component: training_1.TrainingPage },
-	            { title: '~/Links', description: 'Reading list', icon: 'paper-plane', component: links_1.LinkPage }
+	            { title: '~/Links', description: 'Reading list', icon: 'paper-plane', component: links_1.LinkPage },
+	            { title: '~/CHANGELOG', description: 'Breaking changes for your delight', icon: 'book', component: log_1.LogPage }
 	        ];
 	    }
 	    HomePage.prototype.openPage = function (page) {
@@ -63257,6 +63259,76 @@
 	    return LinkPage;
 	})();
 	exports.LinkPage = LinkPage;
+
+
+/***/ },
+/* 367 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var ionic_angular_1 = __webpack_require__(5);
+	var logPipe_1 = __webpack_require__(368);
+	var LogPage = (function () {
+	    function LogPage(nav, navParams) {
+	        this.nav = nav;
+	        this.entries = [{ date: '20160306', message: 'Started filling in my solutions for Mathematical Proofs in sharelatex', icon: 'bulb' },
+	            { date: '20160306', message: 'Meeting the combinatorics group on MathIM tonight', icon: 'bulb' },
+	            { date: '20160305', message: "Started Rhys's book: Combinatorics through guided discovery", icon: 'bulb' },
+	            { date: '20160305', message: "Waiting for Gregg's slack invite. Weekend?", icon: 'hammer' },
+	            { date: '20160304', message: 'Updated firebase-haskell-client, I think I finished GET. Still some trouble with the other verbs. Waiting for Roland to unit test my work (when are we meeting?)', icon: 'hammer' },
+	            { date: '20160304', message: 'Waiting for Adam to schedule our next meeting', icon: 'bulb' }
+	        ];
+	    }
+	    LogPage = __decorate([
+	        ionic_angular_1.Page({
+	            templateUrl: 'build/pages/log/log.html',
+	            pipes: [logPipe_1.LogFilterPipe]
+	        }), 
+	        __metadata('design:paramtypes', [ionic_angular_1.NavController, ionic_angular_1.NavParams])
+	    ], LogPage);
+	    return LogPage;
+	})();
+	exports.LogPage = LogPage;
+
+
+/***/ },
+/* 368 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(7);
+	var LogFilterPipe = (function () {
+	    function LogFilterPipe() {
+	    }
+	    LogFilterPipe.prototype.transform = function (value, args) {
+	        var filter = args[0].toLocaleLowerCase();
+	        return filter ? value.filter(function (log) { return log.date.indexOf(filter) != -1 || log.message.toLocaleLowerCase().indexOf(filter) != -1; }) : value;
+	    };
+	    LogFilterPipe = __decorate([
+	        core_1.Pipe({
+	            name: 'logFilter'
+	        }), 
+	        __metadata('design:paramtypes', [])
+	    ], LogFilterPipe);
+	    return LogFilterPipe;
+	})();
+	exports.LogFilterPipe = LogFilterPipe;
 
 
 /***/ }
