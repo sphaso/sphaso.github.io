@@ -3186,32 +3186,15 @@
 	};
 	var ionic_angular_1 = __webpack_require__(5);
 	var home_1 = __webpack_require__(361);
-	var cosci_1 = __webpack_require__(362);
-	var maths_1 = __webpack_require__(363);
-	var projects_1 = __webpack_require__(364);
-	var training_1 = __webpack_require__(365);
-	var links_1 = __webpack_require__(366);
 	var MyApp = (function () {
-	    function MyApp(app, platform, menu) {
+	    function MyApp(app, platform) {
 	        this.app = app;
 	        this.platform = platform;
-	        this.menu = menu;
 	        this.rootPage = home_1.HomePage;
 	        this.initializeApp();
-	        // set our app's pages
-	        this.pages = [
-	            { title: 'Home', component: home_1.HomePage },
-	            { title: '~/Projects', component: projects_1.ProjectsPage },
-	            { title: '~/Maths', component: maths_1.MathsPage },
-	            { title: '~/CS', component: cosci_1.CosciPage },
-	            { title: '~/Training', component: training_1.TrainingPage },
-	            { title: '~/Links', component: links_1.LinkPage }
-	        ];
 	    }
 	    MyApp.prototype.initializeApp = function () {
-	        var _this = this;
 	        this.platform.ready().then(function () {
-	            _this.menu.open();
 	            // The platform is now ready. Note: if this callback fails to fire, follow
 	            // the Troubleshooting guide for a number of possible solutions:
 	            //
@@ -3228,19 +3211,12 @@
 	            // StatusBar.setStyle(StatusBar.LIGHT_CONTENT)
 	        });
 	    };
-	    MyApp.prototype.openPage = function (page) {
-	        // close the menu when clicking a link from the menu
-	        this.menu.close();
-	        // navigate to the new page if it is not the current page
-	        var nav = this.app.getComponent('nav');
-	        nav.setRoot(page.component);
-	    };
 	    MyApp = __decorate([
 	        ionic_angular_1.App({
 	            templateUrl: 'build/app.html',
 	            config: {} // http://ionicframework.com/docs/v2/api/config/Config/
 	        }), 
-	        __metadata('design:paramtypes', [ionic_angular_1.IonicApp, ionic_angular_1.Platform, ionic_angular_1.MenuController])
+	        __metadata('design:paramtypes', [ionic_angular_1.IonicApp, ionic_angular_1.Platform])
 	    ], MyApp);
 	    return MyApp;
 	})();
@@ -63105,14 +63081,30 @@
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var ionic_angular_1 = __webpack_require__(5);
+	var cosci_1 = __webpack_require__(362);
+	var maths_1 = __webpack_require__(363);
+	var projects_1 = __webpack_require__(364);
+	var training_1 = __webpack_require__(365);
+	var links_1 = __webpack_require__(366);
 	var HomePage = (function () {
-	    function HomePage() {
+	    function HomePage(nav) {
+	        this.nav = nav;
+	        this.pages = [
+	            { title: '~/Projects', description: 'Fun for the whole family', icon: 'hammer', component: projects_1.ProjectsPage },
+	            { title: '~/Maths', description: 'Reading list', icon: 'bulb', component: maths_1.MathsPage },
+	            { title: '~/CS', description: 'Reading list', icon: 'cloud', component: cosci_1.CosciPage },
+	            { title: '~/Training', description: 'Light weights homie', icon: 'body', component: training_1.TrainingPage },
+	            { title: '~/Links', description: 'Reading list', icon: 'paper-plane', component: links_1.LinkPage }
+	        ];
 	    }
+	    HomePage.prototype.openPage = function (page) {
+	        this.nav.push(page.component);
+	    };
 	    HomePage = __decorate([
 	        ionic_angular_1.Page({
 	            templateUrl: 'build/pages/home/home.html'
 	        }), 
-	        __metadata('design:paramtypes', [])
+	        __metadata('design:paramtypes', [ionic_angular_1.NavController])
 	    ], HomePage);
 	    return HomePage;
 	})();

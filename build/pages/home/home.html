@@ -1,19 +1,18 @@
-
 <ion-navbar *navbar>
-  <button menuToggle>
-    <ion-icon name="menu"></ion-icon>
-  </button>
   <ion-title>$HOME</ion-title>
 </ion-navbar>
 
-
 <ion-content padding>
-<p>
-Welcome to my little creek in the web. My name is Giovanni. I'm a software developer from Italy.
-</p>
-<p>
-This is not supposed to look pretty, it's just a space where I'll jot down ideas and keep track of what I'm doing, with whom, why, when.
-</p>
-
-
+<ion-col width-50 offset-25>
+    <ion-list inset>
+        <ion-item *ngFor="#p of pages" (click)="openPage(p)">
+            <ion-avatar item-left>
+                <ion-icon [name]="p.icon"></ion-icon>
+            </ion-avatar>
+            <h2>{{p.title}}</h2>
+            <p>{{p.description}}</p>
+            <ion-icon name="arrow-dropright" isActive="false" item-right></ion-icon>
+        </ion-item>
+    </ion-list>
+</ion-col>
 </ion-content>
