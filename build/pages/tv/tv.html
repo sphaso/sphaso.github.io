@@ -1,0 +1,52 @@
+<ion-navbar *navbar>
+  <ion-title>~/TV</ion-title>
+</ion-navbar>
+
+<ion-content padding>
+    <ion-row>
+        <h2>I'm watching</h2>
+    </ion-row>
+    <ion-row>
+        <tv-box [title]="'House Of Cards'"
+                [season]="'4'"
+                [rating]="5"
+                [url]="'http://dl9fvu4r30qs1.cloudfront.net/16/b3/dba7f28849b39c0650d1b4c09f6f/house-of-cards.jpg'"
+                [withGf]="false"></tv-box>
+        <tv-box [title]="'The Shannara Chronicles'"
+                [season]="'1'"
+                [rating]="3"
+                [url]="'http://s.sidereel.com/tv_shows/57390/giant_2x/289096-4.jpg'"
+                [withGf]="false"></tv-box>
+        <tv-box [title]="'Shades of Blue'"
+                [season]="'1'"
+                [rating]="4"
+                [url]="'http://www.nbc.com/sites/nbcunbc/files/files/styles/nbc_show_about_cover/public/images/2016/2/09/2015_ShadesOfBlue_S1_KeyArt_1920x1080_CC.jpg?itok=wz6rvjnV'"
+                [withGf]="false"></tv-box>
+        <tv-box [title]="'Da Vinci Deamons'"
+                [season]="'2'"
+                [rating]="3"
+                [url]="'http://assets.starz.com/imgix/OriginalsPicker/OriginalPicker_598x336.jpg'"
+                [withGf]="true"></tv-box>
+    </ion-row>
+    <ion-row>
+        <h2>I suggest</h2>
+    </ion-row>
+    <ion-row>
+        <tv-box [title]="'Rubicon'"
+                [rating]="5"
+                [url]="'https://thedrugofthenation.files.wordpress.com/2011/08/rubicon.jpg'"
+                [withGf]="false"></tv-box>
+        <tv-box [title]="'Homeland'"
+                [rating]="5"
+                [url]="'http://media.vanityfair.com/photos/56772f31317013b94342a53b/master/pass/homeland-season-5.jpg'"
+                [withGf]="false"></tv-box>
+        <tv-box [title]="'Hatufim'"
+                [rating]="5"
+                [url]="'http://images6.fanpop.com/image/photos/36500000/Hatufim-Prisoners-Of-War-image-hatufim-prisoners-of-war-36511848-940-529.jpg'"
+                [withGf]="false"></tv-box>
+        <tv-box [title]="'The Expanse'"
+                [rating]="4"
+                [url]="'http://cdn-static.denofgeek.com/sites/denofgeek/files/styles/article_main_wide_image/public/2015/12/the_expanse.jpg'"
+                [withGf]="false"></tv-box>
+    </ion-row>
+</ion-content>

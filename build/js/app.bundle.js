@@ -63087,6 +63087,7 @@
 	var training_1 = __webpack_require__(365);
 	var links_1 = __webpack_require__(366);
 	var log_1 = __webpack_require__(367);
+	var tv_1 = __webpack_require__(369);
 	var HomePage = (function () {
 	    function HomePage(nav) {
 	        this.nav = nav;
@@ -63094,6 +63095,7 @@
 	            { title: '~/Projects', description: 'Fun for the whole family', icon: 'hammer', component: projects_1.ProjectsPage },
 	            { title: '~/Maths', description: 'Reading list', icon: 'bulb', component: maths_1.MathsPage },
 	            { title: '~/CS', description: 'Reading list', icon: 'cloud', component: cosci_1.CosciPage },
+	            { title: '~TV', description: 'Watching list', icon: 'tablet-landscape', component: tv_1.TvPage },
 	            { title: '~/Training', description: 'Light weights homie', icon: 'body', component: training_1.TrainingPage },
 	            { title: '~/Links', description: 'Reading list', icon: 'paper-plane', component: links_1.LinkPage },
 	            { title: '~/CHANGELOG', description: 'Breaking changes for your delight', icon: 'book', component: log_1.LogPage }
@@ -63279,7 +63281,8 @@
 	var LogPage = (function () {
 	    function LogPage(nav, navParams) {
 	        this.nav = nav;
-	        this.entries = [{ date: '20160306', message: 'Started filling in my solutions for Mathematical Proofs in sharelatex', icon: 'bulb' },
+	        this.entries = [{ date: '20160306', message: 'Added TV section. ion-icon directive is broken?', icon: 'arrow-round-back' },
+	            { date: '20160306', message: 'Started filling in my solutions for Mathematical Proofs in sharelatex', icon: 'bulb' },
 	            { date: '20160306', message: 'Meeting the combinatorics group on MathIM tonight', icon: 'bulb' },
 	            { date: '20160305', message: "Started Rhys's book: Combinatorics through guided discovery", icon: 'bulb' },
 	            { date: '20160305', message: "Waiting for Gregg's slack invite. Weekend?", icon: 'hammer' },
@@ -63329,6 +63332,89 @@
 	    return LogFilterPipe;
 	})();
 	exports.LogFilterPipe = LogFilterPipe;
+
+
+/***/ },
+/* 369 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var ionic_angular_1 = __webpack_require__(5);
+	var core_1 = __webpack_require__(7);
+	var Rating = (function () {
+	    function Rating() {
+	        this.range = [1, 2, 3, 4, 5];
+	    }
+	    __decorate([
+	        core_1.Input(), 
+	        __metadata('design:type', Object)
+	    ], Rating.prototype, "rate", void 0);
+	    Rating = __decorate([
+	        core_1.Component({
+	            selector: 'rating',
+	            template: "\n        <span tabindex=\"0\">\n          <template ngFor [ngForOf]=\"range\" #index=\"index\">\n            <span class=\"sr-only\">({{ index < rate ? '*' : ' ' }})</span>\n            <ion-icon \n               [name]=\"index < rate ? 'star' : 'star-outline'\"></ion-icon>\n          </template>\n        </span>\n      "
+	        }), 
+	        __metadata('design:paramtypes', [])
+	    ], Rating);
+	    return Rating;
+	})();
+	exports.Rating = Rating;
+	var TvBoxDirective = (function () {
+	    function TvBoxDirective() {
+	    }
+	    __decorate([
+	        core_1.Input(), 
+	        __metadata('design:type', String)
+	    ], TvBoxDirective.prototype, "title", void 0);
+	    __decorate([
+	        core_1.Input(), 
+	        __metadata('design:type', String)
+	    ], TvBoxDirective.prototype, "season", void 0);
+	    __decorate([
+	        core_1.Input(), 
+	        __metadata('design:type', Boolean)
+	    ], TvBoxDirective.prototype, "withGf", void 0);
+	    __decorate([
+	        core_1.Input(), 
+	        __metadata('design:type', Number)
+	    ], TvBoxDirective.prototype, "rating", void 0);
+	    __decorate([
+	        core_1.Input(), 
+	        __metadata('design:type', String)
+	    ], TvBoxDirective.prototype, "url", void 0);
+	    TvBoxDirective = __decorate([
+	        core_1.Component({
+	            selector: 'tv-box',
+	            directives: [Rating],
+	            templateUrl: 'build/pages/tv/tvbox.html'
+	        }), 
+	        __metadata('design:paramtypes', [])
+	    ], TvBoxDirective);
+	    return TvBoxDirective;
+	})();
+	exports.TvBoxDirective = TvBoxDirective;
+	var TvPage = (function () {
+	    function TvPage(nav, navParams) {
+	        this.nav = nav;
+	    }
+	    TvPage = __decorate([
+	        ionic_angular_1.Page({
+	            templateUrl: 'build/pages/tv/tv.html',
+	            directives: [TvBoxDirective]
+	        }), 
+	        __metadata('design:paramtypes', [ionic_angular_1.NavController, ionic_angular_1.NavParams])
+	    ], TvPage);
+	    return TvPage;
+	})();
+	exports.TvPage = TvPage;
 
 
 /***/ }
