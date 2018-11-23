@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>The soap box - My MuniHac 2018 experience</title>
+        <link rel="stylesheet" href="../css/default.css" />
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="../">The soap box</a>
+            </div>
+            <nav>
+                <a href="../">Home</a>
+                <a href="../archive.html">Archive</a>
+            </nav>
+        </header>
+
+        <main role="main">
+            <article>
+    <section class="title">
+        My MuniHac 2018 experience
+    </section>
+    <section class="header">
+        Posted on November 23, 2018
+        
+            by sphaso
+        
+    </section>
+    <section>
+        <p>I would like to present my experience attending the 2018 edition of MuniHac for two reasons:<br />
+1) I found very few recounts of similar hackatons around. I would have liked to read about past experiences to better prepare<br />
+2) (spoilers!) it was awesome and I feel like writing this could count as another thank you to the organizers and all the friendly people I met there</p>
+<p><strong>Preparation</strong> I first heard about MuniHac from a colleague and we decided to go. The factors that led to this decision were all positives:<br />
+- it’s Haskell. Enough said<br />
+- it’s in Munich. I love visiting Germany. I always feel at ease when I’m there. People are extremely friendly, the air is cleaner, there’s plenty of vegan food<br />
+- most importantly, my girlfriend allowed me to go</p>
+<p>A word on the organization pre-event: stellar! I was really happy to have the option of specifying that I’m vegan, especially since Munich can boast 120+ restaurants with at least vegan options and none of them was around the event. That reassured me a lot.</p>
+<p>We knew that we would be among serious haskellers. In the weeks before our preparation was:<br />
+- working on open source projects (Hacktoberfest helped)<br />
+- a few pairing sessions with a former colleague who’s now a full-time haskeller<br />
+- started reading “Thinking with types” by Sandy Maguire</p>
+<p>The first two helped me consolidate some knowledge, gave me grit in the face of walls of errors from GHC, and introduced me to a fantastic team of haskellers. Shout-out to Kowainik!<br />
+The last resource proved invaluable. It helped me understand some of the basic language extensions and some haskell-power I hadn’t faced before (e.g. type application).</p>
+<p>Ultimately, I was still feeling unprepared, a sheep among wolves, but in Haskell even the wolves are friendly :)</p>
+<p><strong>Day 0</strong> As soon as we landed in beautiful Munich, we heard news that there would be a pizza night so we ran there. It was an Italian place and it was packed. We easily recognized our peers and they were kind enough to find a place for us to squeeze. The pizza was OK and the beers kept coming. I think about half of the participants were at the pizza night so it was nice to get to know a few before-hand.</p>
+<p>I was a bit surprised by how easily we were able to recognize haskellers in the middle of that crowded pizzeria. I kept thinking what it was: a group of men with glasses? few of them actually had glasses and there was a woman among them. Nerdy t-shirts? none in sight. I still wonder.</p>
+<p><strong>Day 1</strong> We obviously wanted to enjoy the full experience, so we got to the place pretty early. By early I mean we had to climb over a fence (there was a road block we didn’t take into consideration) and squeezed in with the organizers. The place was pretty big and it boasted an incredible amount of food (bread, cake, apples, mandarines…) and beverages (coffee, Club Mate, water, apple juice), tshirts and stickers a-plenty. I grabbed some bread and a Club Mate.</p>
+<p>After the initial ritual of registration and schedule announcement, people started presenting their projects. I must admit my heart sunk a bit, at first none of them seemed particularly interesting, and then of course the cool ones started popping in all at once. My choice was between:<br />
+- Liquid Haskell: there was a group of spaniards that worked with Niki Vazou at ZuriHac and they wanted to improve documentation  prepare exercises etc.<br />
+- Translating a simple DB from Scala to Haskell<br />
+- Write a graph-coloring algorithm</p>
+<p>If you know me, you know I have a thing for graphs. Liquid Haskell was cool but I wanted to write code, not documentation. I was also curious to write a DB since I’ve never done it before, but I figured that translating it from Scala wouldn’t be particularly interesting. Graphs it is then.</p>
+<p>In Italy we say “there’s no 2 without a 3”. In fact, I quickly spotted the third Italian in the room, Nicola. He came to us because he had spent 8 years as a researcher in graph coloring. He didn’t want to join because, understandibly, he wanted to do something else, but he gave us some pointers on very cutting-edge methods for our heuristic.<br />
+We spent the whole morning writing a parser in Parsec for the file format which was a bit of a bummer. The afternoon however was spent writing a simulated annealing algorithm which was pretty cool. I was able to apply a small principle I got working with Kowainik: when in doubt, cut and compose. That is: small functions are happy functions.<br />
+We left as late as possible with a basic algorithm in place. We went to Munich proper to eat and hacked away in our hotel rooms until 2am. Club mate sure is powerful!</p>
+<p>A bit of a funny anecdote: my colleague had an headache, so we went to a pharmacy. The lady at the counter warned me that the painkiller contained “coffeine” and I understood “codeine”. I immediately switched to English but it still took me a while to understand that “coffeine” is German for “caffeine”. What a letter can do to a tired haskeller…</p>
+<p><strong>Day 2</strong> We got up pretty early and again squeezed in as soon as possible. On our way to the hackaton we met a professor who was giving a workshop on Generics that afternoon. It was nice to chit-chat and ask some questions about it. I won’t name any names, but I later found out that he was actually the one who wrote the whole Generics idea in GHC. WOW!<br />
+At this point I had already acquired a bit of a routine: enter the room, grab a Club Mate from the case on the right, crack open the laptop, code away.<br />
+Our graph coloring team was going great in the morning as we had acquired two more people: my colleague and another friendly German. An English gentleman (I think his name was David) also gave us some pointers on properly using random in Haskell.</p>
+<p>As soon as the algorithm was ready I tried it on my machine and… it froze! That was a bit of an unexpected problem. I had never worked with threads in haskell, but where to better learn about new Haskell concepts than there? So I set out to do that and in a few minutes I found about channels. It was remarkably easy to implement and my PC never froze again since then :P<br />
+Graph coloring is an interesting project but ultimately didn’t let me apply much of Haskell-specific knowledge, so I was happy to learn something new.</p>
+<p>In the afternoon we all went to the Generics workshop. It was quite mind-blowing. I cannot say I understood everything, but I think I got the gist. It was truly remarkable to see the professor basically live-coding the whole Generics mechanism for a random inductive type (we used the Peano integer construction).</p>
+<p>The night the whole graph-artists team went out to eat in Munich. It was a night of plenty of false starts (every single vegan place was packed full) but we eventually found a small Italian place. We spent the night talking about graphs, maths, research, Italy, Germany, and many things more. It was just great. I felt so happy to know such cool people.</p>
+<p>Back in the hotel I didn’t manage to do much. I was starting to feel the down from the caffeine overload and I crashed at 1am.</p>
+<p><strong>Day 3</strong> A very sad day indeed. The last day of the hackaton. The whole team was in full swing. Nicola decided to join us full time and we set out to implement some bounds on the chromatic number from a paper he found. It was brilliant to be able to work with a former high-level researcher on a purely theoretical problem… in Haskell!<br />
+At first we tried to use memoization but eventually the algorithm proved to be a bit too complicated and we decided not to add unnecessary complexity. I need to get back to it.</p>
+<p>In the early afternoon we recreated the human lambda. Everyone was freezing and with a smile on their face.<br />
+I must say the Haskell community never ceases to amaze me, I’ve never found such a high density of friendly and overall nice and humble people if not in the Maths community.<br />
+After the project presentation I met the spaniards doing Liquid Haskell and they directed me to the exercises, then a simple question on State monads lead to a whole improptu tutorial on mtl. This guy actually came looking for me 15 minutes later to add on it, explaining doubts and answering all the questions I fired at him (there were plenty).</p>
+<p>As in the cheesiest of movies we left our team on the S-bahn tracks, waving from the train, promising to see each other once again at the next Haskell hackaton.</p>
+    </section>
+</article>
+
+        </main>
+
+        <footer>
+            Site proudly generated by
+            <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+        </footer>
+    </body>
+</html>
