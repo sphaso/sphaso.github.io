@@ -3,7 +3,7 @@ title: My MuniHac 2018 experience
 author: sphaso
 ---
 
-I would like to present my experience attending the 2018 edition of MuniHac for two reasons:    
+I would like to present my experience attending the 2018 edition of [MuniHac](https://munihac.github.io/) for two reasons:    
 1) I found very few recounts of similar hackatons around. I would have liked to read about past experiences to better prepare    
 2) (spoilers!) it was awesome and I feel like writing this could count as another thank you to the organizers and all the friendly people I met there    
 
@@ -64,9 +64,11 @@ __Day 3__
 A very sad day indeed. The last day of the hackaton. The whole team was in full swing. Nicola decided to join us full time and we set out to implement some bounds on the chromatic number from a paper he found. It was brilliant to be able to work with a former high-level researcher on a purely theoretical problem... in Haskell!    
 At first we tried to use memoization but eventually the algorithm proved to be a bit too complicated and we decided not to add unnecessary complexity. I need to get back to it.
 
+By the way, this is the [Github repo](https://github.com/mmsbrggr/munihac-graph-coloring).
+
 In the early afternoon we recreated the human lambda. Everyone was freezing and with a smile on their face.    
 I must say the Haskell community never ceases to amaze me, I've never found such a high density of friendly and overall nice and humble people if not in the Maths community.     
-After the project presentation I met the spaniards doing Liquid Haskell and they directed me to the exercises, then a simple question on State monads lead to a whole improptu tutorial on mtl. This guy actually came looking for me 15 minutes later to add on it, explaining doubts and answering all the questions I fired at him (there were plenty).    
+After the project presentation I met the spaniards doing Liquid Haskell and they directed me to [the exercises](https://github.com/janschultecom/20181025-strongly-typed-martini), then a simple question on State monads lead to a whole improptu tutorial on mtl. This guy actually came looking for me 15 minutes later to add on it, explaining doubts and answering all the questions I fired at him (there were plenty).    
 
 As in the cheesiest of movies we left our team on the S-bahn tracks, waving from the train, promising to see each other once again at the next Haskell hackaton.
 
