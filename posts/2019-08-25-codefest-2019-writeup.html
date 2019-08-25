@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>The soap box - Codefest CTF 2019 writeup</title>
+        <link rel="stylesheet" href="../css/default.css" />
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="../">The soap box</a>
+            </div>
+            <nav>
+                <a href="../">Home</a>
+                <a href="../archive.html">Archive</a>
+            </nav>
+        </header>
+
+        <main role="main">
+            <article>
+    <section class="title">
+        Codefest CTF 2019 writeup
+    </section>
+    <section class="header">
+        Posted on August 25, 2019
+        
+            by sphaso
+        
+    </section>
+    <section>
+        <p>This summer I decided to join more online competitions. So far I’ve competed in the <a href="https://cryp.toc.tf/">CryptoCTF</a> and <a href="https://codefest.tech/">the present</a>.<br />
+I didn’t write anything regarding CryptoCTF since I couldn’t solve a single challenge. The challenges at Codefest were very easy in comparison. I’m in no way a security expert and still I could solve a few of them reaching position 67/320. This is how.</p>
+<p><strong>1. Welcome to Codefest 19!</strong></p>
+<p>Half of the flag was given, the other half had been posted the previous day on the official website and then removed. Luckily a colleague of mine is a big fan of Web Archive so this was an easy one. Shoutout Tom!</p>
+<p><strong>2. What language is this?</strong></p>
+<p>After more than an hour trying to find a sort of formula to translate the run-length-encoding given into ASCII, I decided to read writeups of other CTFs where run-length-encoding was used. I couldn’t find any relevant ones, but one writeup mentioned the use of an esoteric language: Ook. I realized then that the title of the challenge might actually be a hint (duh!). If it was a simple translation cipher… why would they use only four characters? (“dios”). I went on <a href="https://esolangs.org/wiki/Main_Page">esolangs</a> and looked for languages starting with one of the letters until I found <code>Deadfish</code>. An online intepreter revealed the flag.</p>
+<p><strong>5. Mail capture</strong></p>
+<p>Googling the first line revealed the encoding used. I’ll admit I wasn’t familiar with it. An online decoder gave the flag.</p>
+<p><strong>7. Weird encoding</strong><br />
+Hint: <code>This encoding is supposed to represent an image. Figure out how?</code></p>
+<p>Two things gave me the right idea: a) the encoded message is split into lines b) assuming the second number represents length, each line is exactly 100 characters long.<br />
+I wrote a simple Haskell script to see the image. Input was massaged because parsing and splitting strings is a pain. Please note this is not clean code by any means.</p>
+<pre><code>module Printer where
+
+printer :: (Int, Int) -&gt; String
+printer (0, n) = replicate n '0'
+printer (1, n) = replicate n '1'
+
+superprinter :: [(Int, Int)] -&gt; String
+superprinter = foldr (\e a -&gt; printer e ++ a) &quot;&quot;
+
+run :: IO ()
+run = mapM_ print $ map superprinter input</code></pre>
+<p>I then used GIMP to trace the <code>1</code>s to reveal the flag. This one was very fun :)</p>
+<p><strong>Failed attempts</strong></p>
+<ol start="3" type="1">
+<li><p>Gibberish file: I immediately noticed that the pattern was periodic. I tried to change the encodings, using google translate to get something out of chinese  hangul characters but nothing came out of it. At some point I got the idea that it might be a binary file but couldn’t find a way to have it run. In hindsight, the answer was in the hint: <code>Reverse it to find the flag.</code>!</p></li>
+<li><p>Image corruption: Opening the file with a text editor one could see the string <code>matrix</code> repeated obsessively. I also noticed different permutations of the string were present, like <code>xirtamatri</code>. I tried deleting them trying to capture the greater set without luck. No image was showing. It turns out the answer was XORing <code>matrix</code>. Duh!</p></li>
+<li><p>Cats are innocent, right?: Opening the file with a text editor, one could see it was actually a PNG image. Changing the extension an image of four cute kittens was showing. I tried playing around with color levels in GIMP to see if there was an hidden message but couldn’t find any. An interesting thing is that there wasn’t any alpha channel. I’m very curious to read a writeup of this challenge. As far as I know only a handful of people were able to solve it.</p></li>
+<li><p>Linux RE 1: The last time I disassembled a binary file was around 1998. I tried with disass, gdb, strace, until I noticed there was a debugger detection mechanism, and this is when I gave up. This is definitely my weakest point.</p></li>
+<li><p>No Fatshaming: The title gave me the idea that it might have something to do with buffer overflow. In this sense I’ve tried inputting long passwords, long usernames, and having the username generator to overflow. Looking at the JS source code, I had the idea to generate the cck (cookie check?) starting with an id at my choice (I figured ‘1’ might be the admin, turns out it was 6). Unfortunately I didn’t read the source code carefully enough, I also had to change the JS so to skip a further validity check. Meh!</p></li>
+</ol>
+<p>Thanks a lot to the <a href="https://codefest.tech/team">team</a> behind Codefest CTF 2019! I had a lot of fun and hope to participate in further editions.</p>
+    </section>
+</article>
+
+        </main>
+
+        <footer>
+            Site proudly generated by
+            <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+        </footer>
+    </body>
+</html>
