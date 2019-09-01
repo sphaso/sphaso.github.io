@@ -49,6 +49,7 @@ __How I prepare mate in a calabaça__
 
 In summer 2017 Delie gifted me a small trove of mate stuff: half a kg of Cruz de Malta, half a kg of Nobleza Gaucha, a palo santo cuia, a plated cuia, a bombilla.    
 By this time I had realised that Campesino was supposed to be drank as tereré but I didn't want to alter my calabaça by putting lemon juice (more on tereré later) so I was very excited to try Cruz.    
+
 __Memories of Cruz de Malta__    
 Cruz is a very famous brand among mateiros. A past boyfriend of Delie used to drink this brand exclusively. As most Argentinian brands it's very smoky and one needs to be careful with infusion time and water temperature. I probably tried it in both madeira (i.e. wood) and calabaça but it's been too long to recall. I suspect the taste would get too strong in calabaça while it's most enjoyable in wood. I remember experimenting with water temperature, reaching the conclusion that 72°C was the threshold for a good Cruz (I tried from 68° to 82°), but I know people who drink it past 75°C. Ultimately I was too inexperienced in the preparation to fully enjoy it.    
 
@@ -88,13 +89,15 @@ Mate is also sold in tea bags for weight loss. I'm not sure why someone would th
 All in all, as I said, what I enjoy is the preparation process and the contemplative nature of drinking mate while studying, programming or playing a strategy game. The bottled or tea bagged versions don't attract me the same way. I don't drink mate to lose weight either, I'm not sure why I do drink it at this point. It's just a small vice I picked up I guess. Mate can be drank in various forms and ulimately it's up to you if you want to turn gaucho all the way or drink it like any other regular tea. There are pictures of guarani drinking mate and their method obviously didn't involve silver filters and thermometers.    
 Two more ways in which one can drink mate is as tereré and chiamarrão.    
 
-__Tereré (and a few words on Campesino)__    
+__Tereré (and a few words on Campesino, Pajarito, and CBSE)__    
 Tereré is cold mate. That's it. Well, not really. There's a whole imagery of gauchos on their horses drinking tereré from a guampa (a horn), but as mentioned people in Paraguay drink it just as much. Being vegan, I avoided the guampa and started with a regular mug. If you have a mug that's a bit slanted it will help with the lavado issue. There's many reasons why one might like cold mate better:    
 - you don't have to wait for the water to heat up to 72°C    
 - you can drink a little and put it in the fridge for the next day (if you drink in ceramic)    
 - it's refreshing, a great pick-me-up for the summer days    
 
-The only tereré yerba I tried is Campesino, mint&lemon variety. Campesino is a common brand in Paraguay and one can find it in different flavors. These flavors however are sprayed on the leaves and once you open it the quality can decay quickly. The first cup is usually very tasty. For this reason I like to add lemon juice and mint to my tereré. I even tried to add cocoa but I was scolded by a gaucho who told me it's a "gringo shit". So I stopped.    
+Speaking of brands, Campesino is a common one in Paraguay and one can find it in different flavors. These flavors however are sprayed on the leaves and once you open it the quality can decay quickly. The first cup is usually very tasty. For this reason I like to add lemon juice and mint to my tereré. I even tried to add cocoa but I was scolded by a gaucho who told me it's a "gringo shit". So I stopped.    
+Pajarito is not specifically a tereré brand but can certainly be drank this way. Pajarito is one of the bigger Paraguayan yerbas and is very enjoyable both cold and hot in wood. I find its taste softer and rounder, I would call it a Paraguayan Rosamonte.    
+One other popular brand is CBSE. The yerba has an Argentinian cut with a lot of powder and is usually mixed with mint and other herbs. It's very tasty both cold and hot in calabaça. I recommend it if you find Campesino too bitter.    
 Since I didn't want to alter the taste of my other calabaça or wooden cuias, I've only tried tereré in ceramic mug, ceramic bowl, and in fruit (more on this later). The procedure to prepare tereré is the same as regular mate except you add cold water and ice cubes. I was told that any mate can be drank cold, but I'm not that convinced.     
 In my experience the taste of a hot mate is fairly monodimensional. It gets blander after each pour but that's it. There's not hints of this, aftertaste of that. It's just a green tea. Tereré is bit richer in this regard due to the added scents and ingredients.    
 
@@ -119,6 +122,7 @@ One can drink hot mate in oranges or grapefruit as well. If you're at the end of
 7) enjoy!    
 
 The best part of drinking mate from fruit, besides the taste, is that you don't have to clean and dry the gourd. Just trash everything and be done with it :)    
+So far I've tried tereré in: pomegranade, orange, pink and yellow grapefruit, pineapple. Curious to try apples.    
 
 __Memories of Rosamonte in pink grapefruit__    
 Rosamonte is great, one of my favorites, but I was getting rather bored with it. I was at the end of the package where it's mostly powder and not so enjoyable (more on powder later). I decided to have a grapefruit and drink mate from it! The grapefruit is mostly an aftertaste and helps tone down the Argentinian smoke, one gets hints of the fruit at unexpected moments, it's not a main feature. The smell of grapefruit is stronger than its taste and very enjoyable. It sticks to your hands.     
@@ -139,30 +143,32 @@ There are many ways to drink chimarrão, here are a few from easy to experienced
 
 __Chima tips and tricks from sphaso__     
 Please note that making chima is particularly difficult. Frustration and disappointment will hunt you, you will second guess yourself to no end because nothing seems to work. Keep going!    
-1) cuia selection: there are cuias made especially for chima, they're bigger, made of porongo (=calabaça), and have a wide slanted area on top. If you don't have one a wooden cuia could theoretically work. Avoid bowls or ceramic    
-2) bombilla selection: there are bombillas made especially for chima, they look a bit like a sigmoid and have a spoon-shaped filter    
+1) cuia selection: there are cuias made especially for chima, they're bigger, made of porongo (=calabaça), and have a wide slanted area on top. If you don't have one a wooden cuia could theoretically work. Avoid gourds or ceramic    
+2) bombilla selection: there are bombillas made especially for chima, they look a bit like a sigmoid and have an oval-shaped filter, kinda like a Go stone    
 3) without the proper equipement and expertise the filter will choke immediately. What one can do to prevent it is to wrap something around the filter. Some tea bags work, people in South America use a "camisinha" (watch out, this can mean condom) which is a small bag of tissue. I sewed a linen camisinha once and it worked OK for a couple of weeks until it broke. There's also a sort of "separator" that keeps the erva on one side of the cuia however I've never tried it. After getting a proper bomba I never needed a camisinha anymore    
-4) even assuming you have the proper cuia, making a chimarrão that lasts more than half a liter is a challenge, why? it's all a matter of physics. The idea is that you create an inverted pyramid on one side of the cuia. From the top, it can look a bit like a cave. The idea is that most of the erva is either stuck at a side or on top, leaving ample space on the bottom for clear water. That the difference from the mate mountain you're probably used to make. This ample space on the bottom is where your filter will be, free and happy not to be choked by the powdered erva. The challenge then is this: too little erva so the filter won't choke? the pyramid won't stay up. Too much erva and you won't have space on the bottom. Erosion is another factor. Maybe your pyramid is perfect for a couple of sips, then the outer part of the pyramid gets wet dragging the whole thing down. It's a bit of a nightmare to be honest and I'm still to perfect my technique    
+4) even assuming you have the proper cuia, making a chimarrão that lasts more than half a liter is a challenge, why? it's all a matter of physics. The idea is that you create an inverted pyramid on one side of the cuia. From the top, it can look a bit like a cave. The idea is that most of the erva is either stuck at a side or on top, leaving ample space on the bottom for clear water. That's the difference from the mate mountain you're probably used to make. This ample space on the bottom is where your filter will be, free and happy not to be choked by the powdered erva. The challenge then is this: too little erva so the filter won't choke? the pyramid won't stay up. Too much erva and you won't have space on the bottom. Erosion is another factor. Maybe your pyramid is perfect for a couple of sips, then the outer part of the pyramid gets wet dragging the whole thing down. It's a bit of a nightmare to be honest and I'm still to perfect my technique    
 5) if the pyramid collapses (it will at some point no matter what) you might be thinking you lost a lot of good erva. Well, yes. But you can salvage it by pouring the chima into a glass from the cuia. It's not the same thing but at least you can keep drinking it. Watch out, it's bound to be VERY strong, it's not just green water. If the pyramid doesn't collapse completely just add water and depending on your bomba you might be OK    
 6) if you realize you've put too much erva or the bottom is muddy, you can dig some out with a tea spoon. No shame, people do this    
 7) sometimes the filter chokes and you want to take it out to clean it. As it breaks the surface, water could come spitting out of the filter, watch out    
 8) instead of taking it completely out (you can't for invertido) sometimes just lifting it a little and letting it fall unclogs it    
 9) the erva is beautiful but it can also make an absolute mess, I always have some tissues around me when I drink it    
 10) chima is strong, don't underestimate the chima. If you feel your eyes are popping out, it's probably time to end your sitting    
+11) if you have trouble with the pyramid collapsing, make sure your bomba is at a 90° angle from it. This way when you drag you won't exort as much pressure on the base of the pyramid    
 
 __Chimarrão invertido__    
 This is the absolutely easiest way to make chima. "Invertido" means inverted \ upside-down. It's called like this because the bombilla ends up surrounded by the erva mountain instead of among water like in usual mate.    
 1) take your faithful porongo and put a spoonful of erva inside    
 2) put hot water up to the neck    
-3) fill the top with erva    
-4) take a spoon or something else to push some erva away from the border on the opposite side of the bomba. Special tools are sold for this but honestly a spoon is fine. One variant is to dig a hole away from both the bomba and the border. It really depends on the diamater of your porongo    
-5) the erva will mount on top the the one you previously poured. You can put it back into the back if it's too much AND if it's dry    
-6) before breaking the surface and reach the water, pour some to strengthen the walls of your new water hole    
-7) finally break the surface. Have a spoon handy to push the wall back if you see it's about to collapse    
-8) enjoy!     
+3) insert the bombilla    
+4) fill the top with erva    
+5) take a spoon or something else to push some erva away from the border on the opposite side of the bomba. Special tools are sold for this but honestly a spoon is fine. One variant is to dig a hole away from both the bomba and the border. It really depends on the diamater of your porongo    
+6) the erva will mount on top the the one you previously poured. You can put it back into the bag if it's too much AND if it's dry    
+7) before breaking the surface and reach the water, pour some to strengthen the walls of your new water hole    
+8) finally break the surface. Have a spoon handy to push the wall back if you see it's about to collapse    
+9) enjoy!     
 
 __Chimarrão do buraco__    
-I don't think its it's actual name. However, the only difference with the ones explained before is that before pouring the erva on top you hold the bomba at the center of the cuia. The water hole will be in the middle just around the bomba.     
+I don't think it's its actual name. However, the only difference with the ones explained before is that before pouring the erva on top you hold the bomba at the center of the cuia. The water hole will be in the middle just around the bomba.     
 
 These past variants will help you save some erva, next one is bound to be stronger as more erva will be used.    
 
@@ -170,7 +176,7 @@ __Chimarrão de verdade__
 1) with your faithful instruments put the erva in the method and quantity that you would usually put for normal mate    
 2) with the porongo slanted, take a spoon and push the walls so to make it more compact. This is vital    
 3) with a small glass and without putting the cuia back in the vertical position, pour lukewarm water inside    
-4) keep the cuia slanted for about a minute. Some people use proper support tools for this    
+4) keep the cuia slanted, erva on the bottom hemisphere, for about a minute. Some people use proper support tools for this    
 5) pour hot water being careful to have it trickle down on the inside wall. We don't want to disturb the pyramid in any way!    
 6) put your bomba and enjoy!    
 
@@ -194,4 +200,4 @@ Mate powder is not erva mate for chima. In any bag of mate you will find powder.
 
 A few words on youtube tutorials. If you're like me, you'll watch hours of youtube to understand all the intricacies of a good mate preparation. The problem is that those tutorials only teach the beginning. Mate evolves on every sip, the leaves get soaked and fall, the erva absorbs water and it grows choking your filter. What to do in those situations? Very little exists on the subject which is however very important. All I want to say is, don't expect your mate to stay the same from beginning to end. Experiment and see what works for you. One example everyone knows, people are very strict about positioning their bombilla and not to have it moved. This is BS. As you grow older in the mate world you discover what you suspected all the way: it's perfectly OK to use the bombilla to mold the yerba to one side, people all other South America do it.    
 
-The journey continues. I'm currently sipping Rosamonte and Barão, but I have a few more brands in my cupboard to try: Pajarito, Poporé, Rosamonte special, CBSE, and a new flavor of Campesino. I'll update this post with my new findings.    
+The journey continues. I'm currently sipping Pajarito and CBSE, but I have a few more brands in my cupboard to try: Poporé and Rosamonte special. I'll update this post with my new findings.    

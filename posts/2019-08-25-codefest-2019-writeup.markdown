@@ -4,7 +4,9 @@ author: sphaso
 ---
 
 This summer I decided to join more online competitions. So far I've competed in the [CryptoCTF](https://cryp.toc.tf/) and [the present](https://codefest.tech/).    
-I didn't write anything regarding CryptoCTF since I couldn't solve a single challenge. The challenges at Codefest were very easy in comparison. I'm in no way a security expert and still I could solve a few of them reaching position 67/320. This is how.    
+I didn't write anything regarding CryptoCTF since I couldn't solve a single challenge. The challenges at Codefest were very easy in comparison. I'm in no way a security expert and still I could solve a few of them reaching position 67/518. This is how.    
+
+(Click [here](https://medium.com/bugbountywriteup/codefest19-ctf-writeups-a8f4e9b45d1) for the official writeup)
 
 __1. Welcome to Codefest 19!__    
 
@@ -48,7 +50,7 @@ __Failed attempts__
 
 6. Cats are innocent, right?: Opening the file with a text editor, one could see it was actually a PNG image. Changing the extension an image of four cute kittens was showing. I tried playing around with color levels in GIMP to see if there was an hidden message but couldn't find any. An interesting thing is that there wasn't any alpha channel. I'm very curious to read a writeup of this challenge. As far as I know only a handful of people were able to solve it.    
 
-7. Linux RE 1: The last time I disassembled a binary file was around 1998. I tried with disass, gdb, strace, until I noticed there was a debugger detection mechanism, and this is when I gave up. This is definitely my weakest point.    
+8. Linux RE 1: The last time I disassembled a binary file was around 1998. I tried with disass, gdb, strace, until I noticed there was a debugger detection mechanism, and this is when I gave up. This is definitely my weakest point.    
 
 10. No Fatshaming: The title gave me the idea that it might have something to do with buffer overflow. In this sense I've tried inputting long passwords, long usernames, and having the username generator to overflow. Looking at the JS source code, I had the idea to generate the cck (cookie check?) starting with an id at my choice (I figured '1' might be the admin, turns out it was 6). Unfortunately I didn't read the source code carefully enough, I also had to change the JS so to skip a further validity check. Meh!    
 
