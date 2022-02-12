@@ -41,6 +41,7 @@ I didn't know anything about making dynamic pages, server-side languages, javasc
 ### 2012 to 2020
 I made websites professionally. I started with Microsoft technologies and jQuery, eventually graduated to AngularJS and React, Elm, PHP Symfony, Elixir Phoenix but mostly worked on the backend side of things. This is probably the peak of complexity in this journey.    
 Around 2014 I found out about websockets and tried to make a website that would leverage them to play Baduk. Then I found out about <a href="https://online-go.com">Online Go</a>.    
+Around 2015 I started making mobile apps using Ionic. I figured it would be cool to make a website that would feel like an app. That was the ur-version of the Soap Box, taken over by the 2018 Hackyll version.    
 In 2018 I created this fine Soap Box.
 
 ### 2022
