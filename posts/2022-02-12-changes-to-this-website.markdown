@@ -4,15 +4,15 @@ author: sphaso
 ---
 
 I've recently decided to make some changes to this website. Ultimately, this little soap box was becoming too bloated to work with for my satisfaction.    
-In 2018 I left Facebook and other social media followed. I needed a place on the web to write and document, possibly share some updates, so this space was created. I wanted to keep it as simple as possible for me to write and publish, without being bothered by the programming aspect of it. I've decided to pick Hackyll, as it provided a minimalist design that I liked. I could write markdown and easily extend the generator code to my liking.    
+In 2018 I left Facebook and other social media followed. I needed a place on the web to write and document, possibly share some updates, so this space was created. I wanted to keep it as simple as possible for me to write and publish, without being bothered by the programming aspect of it. I've decided to pick Hakyll, as it provided a minimalist design that I liked. I could write markdown and easily extend the generator code to my liking.    
 As for any new tool, there is a learning curve. Finding a decent way to publish and manage the Git repository was easy. I found a bash script that already solved this problem and made it work after a few tweaks. Generating the HTML and the links to the main page was working well, until it didn't.    
 When trying to publish the previous post, I might have forgotten some magic words inbetween the steps and everything got screwed up. The deploy didn't work. The index file had duplicate header and footers. It was a mess.    
-In no way whatsoever I'm blaming Hackyll for this. I simply chose the wrong tool for the job.    
+In no way whatsoever I'm blaming Hakyll for this. I simply chose the wrong tool for the job.    
 All I want to do is write some markdown once in a while, transform it into HTML, link it to an index file, publish it.    
 
-I'm using Neovim as my main editor for work and leisure, so the writing aspect is solved. There's no magic behind transforming MD into HTML, Hackyll runs Pandoc, so I could just run Pandoc myself. Now to linking pages.    
+I'm using Neovim as my main editor for work and leisure, so the writing aspect is solved. There's no magic behind transforming MD into HTML, Hakyll runs Pandoc, so I could just run Pandoc myself. Now to linking pages.    
 If the structure of this box was any more complicated, this would indeed need to be automated. I only have an index file, so I can just write three lines of HTML and be done with it.    
-For my idle (defunct) [Niheipedia](https://sphaso.github.io/niheipedia/) project, the structure is indeed far more complicated. I still haven't figured out a decent way to do it in Hackyll, but doing the linking manually would be too painful.   
+For my idle (defunct) [Niheipedia](https://sphaso.github.io/niheipedia/) project, the structure is indeed far more complicated. I still haven't figured out a decent way to do it in Hakyll, but doing the linking manually would be too painful.   
 Publishing is the easiest part, since I'm leveraging Github pages.    
 I had considered going full on text only, without any CSS, but that might indeed be a bit too much.    
 
@@ -38,10 +38,10 @@ Along with some friends we decided to set up a local Baduk Club. I created a web
 ### 2012
 I didn't know anything about making dynamic pages, server-side languages, javascript what? I wanted to make a website that would display Tsumego problems and gather performance data. I got around with patching together some JS libraries for the Go board and PHP to inject the initial position. No framework was hurt in the development of this website.
 
-### 2012 to 2020
+### 2013 to 2020
 I made websites professionally. I started with Microsoft technologies and jQuery, eventually graduated to AngularJS and React, Elm, PHP Symfony, Elixir Phoenix but mostly worked on the backend side of things. This is probably the peak of complexity in this journey.    
 Around 2014 I found out about websockets and tried to make a website that would leverage them to play Baduk. Then I found out about <a href="https://online-go.com">Online Go</a>.    
-Around 2015 I started making mobile apps using Ionic. I figured it would be cool to make a website that would feel like an app. That was the ur-version of the Soap Box, taken over by the 2018 Hackyll version.    
+Around 2015 I started making mobile apps using Ionic. I figured it would be cool to make a website that would feel like an app. That was the ur-version of the Soap Box, taken over by the 2018 Hakyll version.    
 In 2018 I created this fine Soap Box.
 
 ### 2022
@@ -60,7 +60,7 @@ Eventually I decide to go back. Nineties style. This is the current setup:
 You see, no switching branches! Oh wait...    
 Well, at @work I'm doing fullstack where the frontend is in Purescript binding to React, displaying a whole editor for what's basically visual programming. So maybe the complexity peak shifted? You decide.
 
-Now you might be wondering: "Hey Sphaso, what's all this fuss about? you barely write anything!" and that were you would be... absolutely correct. In my defence, I do update "Journey of a mateiro" as soon as I try new Yerba, which is not that often, so keep it bookmarked if it's something that strikes your fancy.    
+Now you might be wondering: "Hey Sphaso, what's all this fuss about? you barely write anything!" and that's where you would be... absolutely correct. In my defence, I do update "Journey of a mateiro" as soon as I try new Yerba, which is not that often, so keep it bookmarked if it's something that strikes your fancy.    
 I plan to write some update posts about my adventure here in the land of the Wurst, no promises on time and quality.    
 
 Thanks for sticking so far into this post, have a great one!
